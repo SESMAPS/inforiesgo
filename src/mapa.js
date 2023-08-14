@@ -5,7 +5,7 @@
 // (CC BY-NC-ND 4.0) Para obtener más información sobre Inforiesgo, puedes contactar a Consultoria SES:
 // • Sitio Web: consultoriases.com
 // • Telegram: @consultoriases
-// • Teléfono: 305 439 2506
+// • Teléfono: +57 305 439 2506
 // • Dirección: Pereira, Risaralda
 // Si tienes preguntas, comentarios o necesitas asistencia, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.
 // Este mapa usa la libreria de OpenLayers, y es necesario para mostrarle al usuario la ubicacion del predio que esta buscando, asi como la capa de zonas de riesgo segun el POT vigente.
