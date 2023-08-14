@@ -1,12 +1,28 @@
-Inforiesgo
+# Inforiesgo
 
-Bienvenido a Inforiesgo, una herramienta desarrollada por Consultoria SES que te proporciona información sobre zonas de riesgo en ciertas localidades. Con Inforiesgo, puedes consultar datos geoespaciales relacionados con zonas de riesgo utilizando tanto un cliente web como un bot de Telegram.
-Características
+Bienvenido a Inforiesgo, una herramienta desarrollada por Consultoria SES que proporciona información sobre zonas de riesgo en ciertas localidades. Con Inforiesgo, puedes consultar datos geoespaciales relacionados con zonas de riesgo utilizando tanto un cliente web como un bot de Telegram.
 
-    Consulta zonas de riesgo en Pereira, Dosquebradas y La Virginia.
-    Realiza consultas a través del cliente web en consultoriases.com o el bot de Telegram (@inforiesgo_bot).
-    Obtén información detallada sobre la amenaza y el barrio asociado a un número predial específico.
-    Interfaz de usuario amigable y fácil de usar.
+## Características
+
+- Consulta zonas de riesgo en Pereira, Dosquebradas y La Virginia.
+- Realiza consultas a través del cliente web en [consultoriases.com](https://consultoriases.com/informacion-de-zonas-de-riesgo/) o el bot de Telegram (@inforiesgo_bot).
+- Obtén información detallada sobre la amenaza y el barrio asociado para un número catastral específico.
+- Interfaz fácil de usar y sencilla.
+
+## Guía de Instalación
+
+**Requisitos:**
+
+- [Node.js](https://nodejs.org/) instalado en tu sistema.
+- [Tomcat](http://tomcat.apache.org/) para la parte del cliente web.
+
+**Pasos:**
+
+1. Clona este repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/SESMAPS/inforiesgo.git
+
 
 Guía de Instalación
 
@@ -68,22 +84,21 @@ APIs y Endpoints
         Endpoint: consultoriases.com/informacion-de-zonas-de-riesgo/
     Bot de Telegram:
         Bot: @inforiesgo_bot
-
 Configuración
 
-La configuración varía según si estás utilizando el cliente web o el bot de Telegram. Consulta las secciones de Guía de Instalación para obtener detalles específicos.
+La configuración varía según si estás utilizando el cliente web o el bot de Telegram. Consulta las secciones de la Guía de Instalación para obtener detalles específicos.
 Mantenimiento y Contribución
 
-Inforiesgo es un proyecto en constante evolución. Si encuentras errores, tienes ideas para mejoras o deseas contribuir de alguna manera, siéntete libre de crear un pull request en el repositorio GitHub.
+Inforiesgo es un proyecto en curso. Si encuentras errores, tienes ideas para mejoras o deseas contribuir de alguna manera, no dudes en crear una solicitud de extracción en el repositorio de GitHub.
 Licencia y Atribuciones
 
-Inforiesgo está licenciado bajo la licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Para obtener más detalles sobre la licencia, consulta Licencia CC BY-NC-ND 4.0.
-FAQ y Solución de Problemas
+Inforiesgo está licenciado bajo la licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Para obtener más detalles sobre la licencia, consulta la Licencia CC BY-NC-ND 4.0.
+Preguntas Frecuentes y Solución de Problemas
 
-Consulta las preguntas frecuentes y la solución de problemas en la sección correspondiente de este documento.
+Consulta las secciones de Preguntas Frecuentes y Solución de Problemas para obtener respuestas a preguntas comunes y soluciones.
 Contacto y Soporte
 
-Si tienes preguntas, comentarios o necesitas asistencia, puedes contactar a Consultoria SES a través de su sitio web, Telegram, teléfono (305 439 2506) o dirección en Pereira, Risaralda.
+Para preguntas, comentarios o asistencia, puedes comunicarte con Consultoria SES a través de su sitio web, Telegram, teléfono (305 439 2506) o dirección en Pereira, Risaralda.
 Actualizaciones y Versionado
 
-Las actualizaciones y las versiones de Inforiesgo se encuentran en el repositorio GitHub. Asegúrate de consultar las últimas versiones para acceder a las características más recientes y las mejoras implementadas.
+Las actualizaciones y versiones de Inforiesgo están disponibles en el repositorio de GitHub. Asegúrate de consultar las versiones más recientes para acceder a las características y mejoras más recientes.
