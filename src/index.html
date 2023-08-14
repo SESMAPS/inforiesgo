@@ -1,0 +1,72 @@
+<!-- INFORIESGO BY CONSULTORIASES.COM VERSION 2.2 Inforiesgo es un proyecto desarrollado por Consultoria SES 
+para proporcionar información sobre zonas de riesgo en ciertas localidades. 
+Está licenciado bajo la licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+(CC BY-NC-ND 4.0) Para obtener más información sobre Inforiesgo, puedes contactar a Consultoria SES:
+•	Sitio Web: consultoriases.com
+•	Telegram: @consultoriases
+•	Teléfono: 305 439 2506
+•	Dirección: Pereira, Risaralda
+Si tienes preguntas, comentarios o necesitas asistencia, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>InfoRiesgo por Consultoria SES</title>
+  <meta name="description"
+    content="Certificado de riesgo diger pereira, Certificado de riesgo diger dosquebradas, Inforiesgo es la herramienta fácil y rápida que le permite a cualquier persona conocer si su predio se encuentra en zona de riesgo, y el tipo de riesgo. Completamente gratis y sin trámites ni filas, solo necesita el número predial. Bienvenido a Inforiesgo, una plataforma que te permite consultar información sobre zonas de riesgo y datos catastrales de tu propiedad . Aquí podrás obtener detalles sobre la ubicación de tu predio y su nivel de amenaza de acuerdo con el Plan de Ordenamiento Territorial vigente y la información DIVIPOLA proporcionada por la Alcaldía Municipal. Para comenzar, simplemente ingresa el código catastral de 30 dígitos de tu propiedad en el campo de búsqueda y presiona “Buscar”. Nuestra plataforma realizará la consulta y te mostrará los resultados de forma clara y concisa. Además, hemos desarrollado un bot de Telegram para facilitar tu experiencia. Puedes acceder al bot a través del siguiente enlace: Inforiesgo Bot. Con el bot, podrás realizar consultas desde la comodidad de tu aplicación Telegram y recibir los resultados directamente en tu dispositivo.">
+  <meta name="keywords"
+    content="riesgo, pereira, diger, dosquebradas, certificado, predial, catastro, pot pereira, pot dosquebradas, diger pereira">
+  <meta name="author" content="Consultoria SES . Empresa Pereirana">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" type="image/png"
+    href="https://sesmaps.xyz/inforiesgo/cropped-Logo_SES-32x32.png">
+  <style>
+    #mapa-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #mapa {
+      width: 80%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+
+    <h1 class="mb-4">Consulta por número predial</h1>
+
+    <form id="formulario">
+      <div class="form-group row">
+        <label for="codigo" class="col-sm-2 col-form-label">Ficha (30dígitos):</label>
+        <div class="col-sm-4">
+          <input type="number" class="form-control" id="codigo" name="codigo" min="0"
+            max="999999999999999999999999999999" required />
+        </div>
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-primary" id="buscar">Buscar</button>
+        </div>
+      </div>
+    </form>
+
+    <div id="resultado">
+      <h2>Resultado de la consulta:</h2>
+      <p id="resultadoTexto"></p>
+    </div>
+  </div>
+  <div id="mapa-container">
+    <div id="mapa"></div>
+  </div>
+  <script src="main-client.js"></script>
+  <script src="mapa.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
+  </script>
+</body>
+</html>
