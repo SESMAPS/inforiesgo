@@ -1,0 +1,13 @@
+// INFORIESGO BY CONSULTORIASES.COM VERSION 2.2
+// Inforiesgo es un proyecto desarrollado por Consultoria SES
+// para proporcionar información sobre zonas de riesgo en ciertas localidades.
+// Está licenciado bajo la licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+// (CC BY-NC-ND 4.0) Para obtener más información sobre Inforiesgo, puedes contactar a Consultoria SES:
+// • Sitio Web: consultoriases.com
+// • Telegram: @consultoriases
+// • Teléfono: 305 439 2506
+// • Dirección: Pereira, Risaralda
+// Si tienes preguntas, comentarios o necesitas asistencia, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.
+// Este mapa usa la libreria de OpenLayers, y es necesario para mostrarle al usuario la ubicacion del predio que esta buscando, asi como la capa de zonas de riesgo segun el POT vigente.
+
+let mapa;function mostrarMapa(coordenadaWKT){if(mapa){mapa.setTarget(null);mapa=null;}const coordinates=coordenadaWKT.split(" ");const longitude=parseFloat(coordinates[0].replace("POINT(",""));const latitude=parseFloat(coordinates[1].replace(")",""));const rotateControl=new ol.control.Rotate();const scaleLineControl=new ol.control.ScaleLine();const baseLayer=new ol.layer.Tile({source:new ol.source.OSM({attributions:['InfoRiesgo by ConsultoriaSES, datos de POT Pereira, y AMCO','© OpenStreetMap']}),});const pointFeature=new ol.Feature({geometry:new ol.geom.Point(ol.proj.fromLonLat([longitude,latitude])),});const iconStyle=new ol.style.Style({image:new ol.style.Icon({src:"https://sesmaps.xyz/inforiesgo/cropped-Logo_SES-32x32.png",type:"image/png",size:[32,32],anchor:[0.5,1],}),});pointFeature.setStyle(iconStyle);const vectorSource=new ol.source.Vector({features:[pointFeature],});const vectorLayer=new ol.layer.Vector({source:vectorSource,});const codigoUsuario=codigoInput.value.trim();const catAmcoLayer=new ol.layer.Image({source:new ol.source.ImageWMS({url:"https://sesmaps.xyz/geoserver/ows",params:{LAYERS:"sesmaps:cat_amco",TILED:false,CQL_FILTER:`codigo='${codigoUsuario}'`,},serverType:"geoserver",crossOrigin:"anonymous",}),});const zonaRiesgoLayer=new ol.layer.Tile({source:new ol.source.TileWMS({url:"https://sesmaps.xyz/geoserver/ows",params:{LAYERS:"sesmaps:pere_riesgo",TILED:false,},serverType:"geoserver",crossOrigin:"anonymous",}),style:new ol.style.Style({fill:new ol.style.Fill({color:"rgba(255,165,0,0.5)",}),stroke:new ol.style.Stroke({color:"red",width:2,}),}),});mapa=new ol.Map({target:"mapa",layers:[baseLayer,zonaRiesgoLayer,catAmcoLayer,vectorLayer],view:new ol.View({center:ol.proj.fromLonLat([longitude,latitude]),zoom:18,}),});}
